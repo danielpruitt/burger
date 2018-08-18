@@ -1,0 +1,36 @@
+<h1>BURGERS!</h1>
+
+<h2>Every body loves burgers. You have the power to make any burger you want and DEVOUR it!</h2>
+
+<ul>
+    {{#each burgers}}
+        {{#unless devoured}}
+            <li>
+                {{burgerType}}
+
+                <button class="devour" data-id="{{id}}" data-devourIt="{{devourIt}}">{{devourIt}}Devour!</button>
+            </li>
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>The Burgers that have been DEVOURED!</h2>
+
+<ul> 
+    {{#each burgers}}
+        {{#if devoured}}
+           {{burgerType}}
+        {{/if}}
+    {{/each}}
+</ul>
+
+<h2>Create a Burger</h2>
+
+<form class="createBurger">
+    <div class= "form-group">
+        <label for="burg"> Burger Name:</label>
+        <input type="text" id="burg" name="name">
+    </div>
+
+    <button type="submit">Create Burger</button>
+</form>
