@@ -12,7 +12,7 @@
                     {{#each burgers}} {{#unless devoured}}
                     <div class="card-action z-depth-2 grey darken-2">
                         <li>
-                            <h4>{{burgerType}}</h4>
+                            <h4>{{id}}: {{burgerType}}</h4>
 
                             <button class="devour btn waves-effect waves-light grey" data-id="{{id}}" data-devourIt="{{devourIt}}">{{devourIt}}Devour!</button>
                         </li>
@@ -48,7 +48,7 @@
 
                     {{#each burgers}} {{#if devoured}}
                     <li>
-                        <h4>{{burgerType}}</h4>
+                        <h4>{{id}}: {{burgerType}}</h4>
                     </li>
                     {{/if}} {{/each}}
                     </li>
